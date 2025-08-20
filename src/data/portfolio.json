@@ -1,0 +1,270 @@
+{
+  "hero": {
+    "name": "Mohammed Nedal",
+    "title": "Full Stack Developer",
+    "description": "I craft dynamic, user-friendly web applications using modern technologies. Passionate about creating scalable solutions that make a difference.",
+    "image": "https://i.postimg.cc/Ghd0M84y/mohammednedal.png",
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/in/mohammed--nedal",
+      "github": "https://github.com/mohammed-n-jumaa",
+      "email": "mohammed.n.jumaa@gmail.com"
+    }
+  },
+  "projects": [
+    {
+      "title": "JoCom Customer Feedback System",
+      "description": "A comprehensive interactive customer feedback system developed during my tenure at JoCom company. The system features an intuitive client interface with emoji-based satisfaction ratings (Dissatisfied, Neutral, Satisfied) and dynamic question forms that adapt based on user responses. Includes a complete admin portal for managing feedback questions, analyzing responses, and generating reports. Built to enhance customer experience evaluation and provide valuable insights for business improvement.",
+      "image": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop",
+      "technologies": [
+        "React",
+        "Laravel",
+        "MySQL",
+        "RESTful API"
+      ],
+      "link": "https://feedback.jocom.jo",
+      "github": "https://github.com/mohammed-n-jumaa/jocom-feedback-system",
+      "category": "Full Stack",
+      "id": "1"
+    },
+    {
+      "title": "Software Services Platform (Code Circle)",
+      "description": "Platform for a software company providing IT services, including software development, website creation, application development, and consulting.",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+      "technologies": [
+        "React",
+        "Laravel",
+        "MySQL",
+        "RESTful API"
+      ],
+      "link": "https://codecircle.co/home",
+      "github": "https://codecircle.co/home",
+      "category": "Full Stack",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "title": "Personal Portfolio with Admin Panel",
+      "description": "Dynamic personal portfolio with fully functional admin dashboard for content management.",
+      "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
+      "technologies": [
+        "NEXT.js",
+        "Tailwind CSS",
+        "TypeScript"
+      ],
+      "link": "#",
+      "github": "#",
+      "category": "Frontend"
+    },
+    {
+      "title": "Cryptocurrency Analysis Website (Arab Trade)",
+      "description": "Comprehensive platform for cryptocurrency analysis with real-time market data and trend analysis tools.",
+      "image": "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=600&h=400&fit=crop",
+      "technologies": [
+        "PHP",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "link": "https://github.com/mohammed-n-jumaa/Arab-Trade",
+      "github": "https://github.com/mohammed-n-jumaa/Arab-Trade",
+      "category": "Full Stack",
+      "id": "4"
+    },
+    {
+      "title": "Free Legal Consultation Website",
+      "description": "User-friendly platform offering free legal consultations with integrated booking system for lawyer appointments.",
+      "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=400&fit=crop",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Laravel",
+        "MySQL",
+        "Bootstrap"
+      ],
+      "link": "https://github.com/mohammed-n-jumaa/Master_piece_work",
+      "github": "https://github.com/mohammed-n-jumaa/Master_piece_work",
+      "category": "Full Stack",
+      "id": "5"
+    },
+    {
+      "title": "Orange Community Platform",
+      "description": "Community-driven platform designed to connect users through discussions, events, and resources.",
+      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop",
+      "technologies": [
+        "React.js",
+        "Laravel",
+        "RESTful API",
+        "MySQL"
+      ],
+      "link": "https://github.com/mohammed-n-jumaa/Orang_Community_React",
+      "github": "https://github.com/mohammed-n-jumaa/Orang_Community_React",
+      "category": "Full Stack",
+      "id": "6"
+    }
+  ],
+  "skills": {
+    "frontend": [
+      {
+        "name": "HTML5",
+        "level": 90
+      },
+      {
+        "name": "CSS3",
+        "level": 90
+      },
+      {
+        "name": "JavaScript",
+        "level": 91
+      },
+      {
+        "name": "React.js",
+        "level": 90
+      },
+      {
+        "name": "Bootstrap",
+        "level": 80
+      },
+      {
+        "name": "Tailwind CSS",
+        "level": 75
+      },
+      {
+        "name": "Next.js",
+        "level": 60
+      }
+    ],
+    "backend": [
+      {
+        "name": "PHP",
+        "level": 95
+      },
+      {
+        "name": "Laravel",
+        "level": 90
+      },
+      {
+        "name": "RESTful APIs",
+        "level": 91
+      }
+    ],
+    "database": [
+      {
+        "name": "MySQL",
+        "level": 100
+      },
+      {
+        "name": "Database Design",
+        "level": 92
+      }
+    ],
+    "tools": [
+      {
+        "name": "Git/GitHub",
+        "level": 100
+      },
+      {
+        "name": "Visual Studio Code",
+        "level": 100
+      },
+      {
+        "name": "Figma",
+        "level": 50
+      },
+      {
+        "name": "Postman",
+        "level": 78
+      }
+    ]
+  },
+  "services": [
+    {
+      "id": "1",
+      "title": "Full Stack Development",
+      "description": "Complete web application development from concept to deployment using modern technologies.",
+      "icon": "Code",
+      "features": [
+        "Frontend Development",
+        "Backend Development",
+        "Database Design",
+        "API Integration"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Web Design & UI/UX",
+      "description": "Creating intuitive and responsive user interfaces that provide excellent user experience.",
+      "icon": "Palette",
+      "features": [
+        "Responsive Design",
+        "User Interface",
+        "User Experience",
+        "Prototyping"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "E-commerce Solutions",
+      "description": "Building scalable e-commerce platforms with secure payment integration and inventory management.",
+      "icon": "ShoppingCart",
+      "features": [
+        "Online Stores",
+        "Payment Integration",
+        "Inventory Management",
+        "Order Tracking"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Consulting & Support",
+      "description": "Technical consulting and ongoing support for web development projects and maintenance.",
+      "icon": "Users",
+      "features": [
+        "Technical Consulting",
+        "Code Review",
+        "Performance Optimization",
+        "Maintenance"
+      ]
+    }
+  ],
+  "testimonials": [],
+  "experience": [
+    {
+      "id": "1",
+      "title": "Software Engineer",
+      "company": "Jocom",
+      "period": "June 2024 - Present",
+      "location": "Amman, Jordan",
+      "description": "Working on various software development projects, focusing on web applications and system integration.",
+      "responsibilities": [
+        "Developing and maintaining web applications",
+        "Collaborating with cross-functional teams",
+        "Code review and optimization",
+        "Technical problem solving"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Full-Stack Web Development Trainee",
+      "company": "Orange Coding Academy",
+      "period": "September 2024 - January 2025",
+      "location": "Amman, Jordan",
+      "description": "Completed intensive Full-Stack Web Development bootcamp, working on real-world projects and learning modern web technologies.",
+      "responsibilities": [
+        "Built interactive and responsive user interfaces",
+        "Developed web applications with PHP and Laravel",
+        "Database design and optimization",
+        "Team collaboration and project management"
+      ]
+    }
+  ],
+  "contact": {
+    "email": "mohammed.n.jumaa@gmail.com",
+    "phone": "+962-787665773",
+    "location": "Amman, Jordan",
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/in/mohammed--nedal",
+      "github": "https://github.com/mohammed-n-jumaa"
+    }
+  }
+}
