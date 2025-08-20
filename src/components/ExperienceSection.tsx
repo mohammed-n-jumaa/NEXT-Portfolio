@@ -44,7 +44,7 @@ export default function ExperienceSection() {
             id: "2",
             title: "Full-Stack Web Development Trainee",
             company: "Orange Coding Academy",
-            period: "September 2024 - January 2025",
+            period: "September 2024 - February 2025",
             location: "Amman, Jordan",
             description: "Completed intensive Full-Stack Web Development bootcamp, working on real-world projects.",
             responsibilities: [
