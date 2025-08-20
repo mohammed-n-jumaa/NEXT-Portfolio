@@ -99,7 +99,7 @@ export default function HeroSection() {
               </button>
 
               <a
-                href="/resume.pdf"
+                href="/Mohammed Nedal CV.pdf"
                 download
                 className="btn-secondary"
               >
