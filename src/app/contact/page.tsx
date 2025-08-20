@@ -7,10 +7,11 @@ import Link from 'next/link';
 import toast from 'react-hot-toast';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import emailjs from 'emailjs-com';
 
 interface FormData {
+  [key: string]: string;
   name: string;
-  email: string;
   subject: string;
   message: string;
 }
@@ -18,7 +19,6 @@ interface FormData {
 export default function ContactPage() {
   const [formData, setFormData] = useState<FormData>({
     name: '',
-    email: '',
     subject: '',
     message: ''
   });
@@ -32,36 +32,44 @@ export default function ContactPage() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+   const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  
+  // Validate all fields
+  if (!formData.name || !formData.subject || !formData.message) {
+    toast.error('Please fill in all fields');
+    return;
+  }
+  
+  setIsSubmitting(true);
 
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+  try {
+    
+    const templateParams = {
+      from_name: formData.name,    
+      subject: formData.subject,   
+      message: formData.message    
+    };
 
-      if (response.ok) {
-        toast.success('Message sent successfully! I\'ll get back to you soon. 🚀', {
-          duration: 5000,
-          icon: '✉️'
-        });
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        throw new Error('Failed to send message');
-      }
-    } catch (error) {
-      toast.error('Failed to send message. Please try again or contact me directly.', {
-        duration: 4000,
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+    await emailjs.send(
+      'service_dwwxw3i',         
+      'template_ouhebxi',        
+      templateParams,            
+      'v3dn1ay0mxVqWChIp'        
+    );
+
+    toast.success("Message sent successfully! I'll get back to you soon. 🚀", { duration: 5000 });
+    setFormData({ name: '',  subject: '', message: '' });
+
+  } catch (err) {
+    console.error('EmailJS error:', err);
+    toast.error('Failed to send message. Please try again or contact me directly.', { duration: 4000 });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
+
 
   const contactInfo = [
     {
@@ -241,14 +249,14 @@ export default function ContactPage() {
                     </div>
 
                     <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid md:grid-cols-2 gap-6">
+                      <div className="grid md:grid-cols-1 gap-6">
                         <motion.div
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: 0.3 }}
                         >
                           <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                            Full Name *
+                            Email Address *
                           </label>
                           <input
                             type="text"
@@ -258,29 +266,11 @@ export default function ContactPage() {
                             onChange={handleChange}
                             required
                             className="w-full px-4 py-4 bg-background/50 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary-500 transition-all duration-300 backdrop-blur-sm"
-                            placeholder="Your full name"
+                            placeholder="Email Address *"
                           />
                         </motion.div>
 
-                        <motion.div
-                          initial={{ opacity: 0, x: 20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: 0.4 }}
-                        >
-                          <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                            Email Address *
-                          </label>
-                          <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                            className="w-full px-4 py-4 bg-background/50 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary-500 transition-all duration-300 backdrop-blur-sm"
-                            placeholder="your.email@example.com"
-                          />
-                        </motion.div>
+
                       </div>
 
                       <motion.div
