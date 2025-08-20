@@ -30,7 +30,7 @@ export default function ExperienceSection() {
             id: "1",
             title: "Software Engineer",
             company: "Jocom",
-            period: "June 2024 - Present",
+            period: "June 2025 - Present",
             location: "Amman, Jordan",
             description: "Working on various software development projects, focusing on web applications and system integration.",
             responsibilities: [
