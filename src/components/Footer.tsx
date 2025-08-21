@@ -15,13 +15,13 @@ export default function Footer() {
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      href: 'https://linkedin.com/in/mohammed-nedal',
+      href: 'https://www.linkedin.com/in/mohammed--nedal',
       color: 'hover:text-blue-500'
     },
     {
       name: 'GitHub',
       icon: Github,
-      href: 'https://github.com/mohammed-nedal',
+      href: 'https://github.com/mohammed-n-jumaa',
       color: 'hover:text-gray-600 dark:hover:text-gray-300'
     },
     {

@@ -86,7 +86,7 @@ export default function HomePage() {
       
       {/* Skills Section - Only show if has skills */}
       {hasSkills && <SkillsSection />}
-      
+       
       {/* Services Section - Only show if has services */}
       {hasServices && <ServicesSection />}
       

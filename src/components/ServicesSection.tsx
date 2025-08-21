@@ -26,7 +26,7 @@ export default function ServicesSection() {
   const [activeService, setActiveService] = useState(0);
   const [isAutoRotating, setIsAutoRotating] = useState(true);
   const cubeRef = useRef<HTMLDivElement>(null);
-  
+
   // 3D rotation values
   const rotateX = useMotionValue(0);
   const rotateY = useMotionValue(0);
@@ -76,7 +76,7 @@ export default function ServicesSection() {
   // Auto-rotate cube
   useEffect(() => {
     if (!isAutoRotating) return;
-    
+
     const interval = setInterval(() => {
       setActiveService(prev => (prev + 1) % services.length);
     }, 4000);
@@ -92,7 +92,7 @@ export default function ServicesSection() {
       { x: 0, y: -180 },   // Back
       { x: 0, y: -270 },   // Left
     ];
-    
+
     if (services.length > 0) {
       const rotation = rotations[activeService] || rotations[0];
       rotateX.set(rotation.x);
@@ -103,7 +103,7 @@ export default function ServicesSection() {
   const handleServiceClick = (index: number) => {
     setActiveService(index);
     setIsAutoRotating(false);
-    
+
     // Resume auto-rotation after 10 seconds
     setTimeout(() => setIsAutoRotating(true), 10000);
   };
@@ -163,7 +163,7 @@ export default function ServicesSection() {
               Comprehensive web development services tailored to bring your digital vision to life
             </p>
           </motion.div>
-{/* Service Navigation */}
+          {/* Service Navigation */}
           <motion.div variants={itemVariants} className="flex justify-center">
             <div className="flex flex-wrap gap-4 p-2 bg-card rounded-xl border border-border/50">
               {services.map((service, index) => {
@@ -172,11 +172,10 @@ export default function ServicesSection() {
                   <motion.button
                     key={service.id}
                     onClick={() => handleServiceClick(index)}
-                    className={`flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
-                      index === activeService
+                    className={`flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition-all duration-300 ${index === activeService
                         ? 'bg-gradient-to-r from-primary-500 to-secondary-500 text-white shadow-lg'
                         : 'text-muted-foreground hover:text-foreground hover:bg-accent'
-                    }`}
+                      }`}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -191,7 +190,7 @@ export default function ServicesSection() {
             {/* 3D Rotating Cube */}
             <motion.div variants={itemVariants} className="flex justify-center">
               <div className="relative">
-                <div 
+                <div
                   className="w-80 h-80 perspective-1000"
                   style={{ perspective: '1000px' }}
                 >
@@ -216,9 +215,8 @@ export default function ServicesSection() {
                       return (
                         <div
                           key={service.id}
-                          className={`absolute inset-0 w-80 h-80 bg-gradient-to-br from-card to-accent border border-border/50 rounded-2xl flex flex-col items-center justify-center p-6 text-center shadow-lg ${
-                            index === activeService ? 'ring-2 ring-primary-500' : ''
-                          }`}
+                          className={`absolute inset-0 w-80 h-80 bg-gradient-to-br from-card to-accent border border-border/50 rounded-2xl flex flex-col items-center justify-center p-6 text-center shadow-lg ${index === activeService ? 'ring-2 ring-primary-500' : ''
+                            }`}
                           style={{
                             transform: transforms[index],
                             backfaceVisibility: 'hidden',
@@ -246,11 +244,10 @@ export default function ServicesSection() {
                     <button
                       key={index}
                       onClick={() => handleServiceClick(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                        index === activeService
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${index === activeService
                           ? 'bg-primary-500 scale-125'
                           : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
-                      }`}
+                        }`}
                     />
                   ))}
                 </div>
@@ -284,7 +281,7 @@ export default function ServicesSection() {
                       </p>
                     </div>
                   </div>
-                  
+
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     {services[activeService]?.description}
                   </p>
@@ -309,12 +306,12 @@ export default function ServicesSection() {
                   </div>
                 </div>
 
-                {/* CTA Button - تم تعديله للانتقال إلى صفحة الاتصال */}
+                
                 <motion.button
                   className="btn-primary group"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => router.push('/contact')} // الانتقال إلى صفحة الاتصال
+                  onClick={() => router.push('/contact')} 
                 >
                   Get Started
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -323,7 +320,7 @@ export default function ServicesSection() {
             </motion.div>
           </div>
 
-          
+
         </motion.div>
       </div>
 
