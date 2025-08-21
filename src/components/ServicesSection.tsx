@@ -162,6 +162,31 @@ export default function ServicesSection() {
             </p>
           </motion.div>
 
+          {/* Service Navigation - تم نقله إلى هنا */}
+          <motion.div variants={itemVariants} className="flex justify-center">
+            <div className="flex flex-wrap gap-4 p-2 bg-card rounded-xl border border-border/50">
+              {services.map((service, index) => {
+                const IconComponent = iconComponents[service.icon as keyof typeof iconComponents] || Code;
+                return (
+                  <motion.button
+                    key={service.id}
+                    onClick={() => handleServiceClick(index)}
+                    className={`flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
+                      index === activeService
+                        ? 'bg-gradient-to-r from-primary-500 to-secondary-500 text-white shadow-lg'
+                        : 'text-muted-foreground hover:text-foreground hover:bg-accent'
+                    }`}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <IconComponent className="w-5 h-5" />
+                    <span className="hidden sm:inline">{service.title}</span>
+                  </motion.button>
+                );
+              })}
+            </div>
+          </motion.div>
+
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* 3D Rotating Cube */}
             <motion.div variants={itemVariants} className="flex justify-center">
@@ -300,31 +325,6 @@ export default function ServicesSection() {
               </motion.div>
             </motion.div>
           </div>
-
-          {/* Service Navigation */}
-          <motion.div variants={itemVariants} className="flex justify-center">
-            <div className="flex flex-wrap gap-4 p-2 bg-card rounded-xl border border-border/50">
-              {services.map((service, index) => {
-                const IconComponent = iconComponents[service.icon as keyof typeof iconComponents] || Code;
-                return (
-                  <motion.button
-                    key={service.id}
-                    onClick={() => handleServiceClick(index)}
-                    className={`flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
-                      index === activeService
-                        ? 'bg-gradient-to-r from-primary-500 to-secondary-500 text-white shadow-lg'
-                        : 'text-muted-foreground hover:text-foreground hover:bg-accent'
-                    }`}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <IconComponent className="w-5 h-5" />
-                    <span className="hidden sm:inline">{service.title}</span>
-                  </motion.button>
-                );
-              })}
-            </div>
-          </motion.div>
         </motion.div>
       </div>
 
@@ -333,7 +333,7 @@ export default function ServicesSection() {
           perspective: 1000px;
         }
         .preserve-3d {
-          transform-style: preserve-3d;
+          transformStyle: preserve-3d;
         }
       `}</style>
     </section>
